@@ -40,6 +40,13 @@ hbs.registerHelper("screamIt", (text) => {
    });
  });
 
+app.get("/projects.hbs", (req, res) => {
+  res.render("projects.hbs", {
+    title: "Project Portfolio"
+    message: "Here you can see all my projects"
+  });
+})
+
  app.get("/about", (req, res) => {
    res.render("about.hbs", {
      pageTitle: "About Page"
